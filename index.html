@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="Anaprotek – Solutions professionnelles en informatique et cybersécurité avec une approche 'security by design'.">
+      <meta name="keywords" content="Cybersécurité, IT, Services informatiques, Monitoring, Audits, Anaprotek, Sherbrooke, informatique">
+      <meta name="author" content="Anaprotek">
+      <meta name="referrer" content="strict-origin-when-cross-origin">
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <title>Anaprotek - Cybersécurité & IT</title>
+      <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self' 'unsafe-inline';
+  img-src 'self' https://raw.githubusercontent.com/Desnyt628/Desnyt628.github.io/ ;
+  script-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
+  object-src 'none';
+  form-action 'self' https://formspree.io;
+  base-uri 'self';
+">
+      <style>
+        body {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          background: #0A0F1A;
+          color: #E5E7EB;
+          line-height: 1.5;
+          font-size: 115%;
+        }
+
+        a {
+          color: #1CC7C1;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        h1,
+        h2,
+        h3 {
+          margin: 0 0 .6rem;
+        }
+
+        .container {
+          max-width: 1050px;
+          margin: auto;
+          padding: 1.5rem;
+        }
+
+        header,
+        footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+          background: #0F1625;
+        }
+
+        nav {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav a {
+          color: #A5B4CF;
+          margin: 0 .5rem;
+        }
+
+        .btn {
+          background: #1CC7C1;
+          color: #000;
+          padding: .6rem 1rem;
+          border-radius: 6px;
+          text-align: center;
+          display: inline-block;
+        }
+
+        .btn:hover {
+          transform: translateY(-2px) scale(1.05);
+        }
+
+        section {
+          padding: 2.5rem 0;
+          border-bottom: 1px solid #1b253a;
+        }
+
+        .grid-2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .grid-3 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+
+        .card {
+          background: #121A2A;
+          padding: 1rem;
+          border-radius: 8px;
+        }
+
+        article {
+          display: block;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 6px;
+          object-fit: cover;
+        }
+
+        input,
+        textarea {
+          background: #0F1625;
+          border: 1px solid #1CC7C1;
+          color: #E5E7EB;
+          border-radius: 6px;
+          padding: .8rem;
+          width: 100%;
+          font-size: 1.1em;
+        }
+
+        .slogan {
+          font-style: italic;
+          color: #1CC7C1;
+          margin-top: .5rem;
+        }
+
+        .center-cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 1rem;
+          margin-top: 1rem;
+        }
+
+        .center-cards .card {
+          flex: 1 1 300px;
+          max-width: 350px;
+        }
+
+        @media(max-width:980px) {
+          .grid-2 {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            text-align: center;
+          }
+
+          header,
+          footer {
+            flex-direction: column;
+            gap: .8rem;
+            text-align: center;
+          }
+        }
+
+        @media(max-width:780px) {
+          .grid-3 {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+          }
+
+          .center-cards .card {
+            max-width: 100%;
+          }
+        }
+
+        @media(max-width:480px) {
+          h1 {
+            font-size: 1.8rem;
+          }
+
+          h2 {
+            font-size: 1.4rem;
+          }
+
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          .container {
+            padding: 1rem;
+          }
+
+          .btn {
+            padding: .5rem .8rem;
+            font-size: .9rem;
+          }
+        }
+
+        .logo {
+          width: 50px;
+          height: 50px;
+          background: #1CC7C1;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          color: #0A0F1A;
+          text-align: center;
+          flex-shrink: 0;
+        }
+
+        .lang-btn {
+          background: #1CC7C1;
+          color: #000;
+          border: none;
+          border-radius: 4px;
+          padding: 0.3rem 0.6rem;
+          margin-left: 0.5rem;
+          cursor: pointer;
+        }
+
+        footer {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          font-size: 90%;
+        }
+
+        a:hover {
+          opacity: 0.9;
+          transition: all 0.2s;
+        }
+      </style>
+    </head>
+  <body>
+    <header>
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <div class="logo">Logo</div><strong>Anaprotek</strong>
+      </div>
+      <nav id="main-nav"><a data-section="services">Services</a><a data-section="process">Comment Nous Travaillons</a><a data-section="about">À propos</a><a data-section="contact">Contact</a></nav>
+      <div><button class="lang-btn" onclick="switchLang('fr')">FR</button><button class="lang-btn" onclick="switchLang('en')">EN</button></div>
+    </header>
+    <main>
+      <!-- French Content -->
+      <div id="content-fr">
+        <section class="container">
+          <div class="grid-2">
+            <div>
+              <h1>Anaprotek</h1>
+              <p>Solutions professionnelles en Informatique et cybersécurité : nous proposons des services IT classiques mais toujours avec une approche "security by design".</p>
+              <p class="slogan">La sécurité n’est pas une option, c’est notre fondation</p>
+              <a class="btn" onclick="scrollToSection('services')">Découvrir nos services</a>
+            </div>
+            <img src="https://raw.githubusercontent.com/Desnyt628/Desnyt628.github.io/refs/heads/main/img.jpg" alt="Illustration cybersécurité" loading="lazy">
+          </div>
+        </section>
+        <section id="services-fr" class="container">
+          <h2>Nos Services Continus</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Surveillance & Monitoring</h3>
+              <p>Suivi continu de vos systèmes et équipements pour détecter les anomalies, anticiper les problèmes et maintenir un environnement stable et sécurisé.</p>
+            </article>
+            <article class="card">
+              <h3>Audits & Rapports</h3>
+              <p>Réalisation d’audits réguliers et production de rapports détaillés pour suivre la sécurité et la performance de votre infrastructure.</p>
+            </article>
+            <article class="card">
+              <h3>Gestion & Déploiement</h3>
+              <p>Gestion des mises à jour, déploiement de logiciels et support à distance pour garantir un environnement à jour et sécurisé.</p>
+            </article>
+          </div>
+          <div class="center-cards">
+            <article class="card">
+              <h3>Détection de vulnérabilités</h3>
+              <p>Identification proactive des failles et vulnérabilités pour réduire les risques avant qu’ils n’affectent vos systèmes.</p>
+            </article>
+            <article class="card">
+              <h3>Support Technique</h3>
+              <p>Assistance et intervention technique continue pour résoudre les problèmes rapidement et efficacement.</p>
+            </article>
+          </div>
+        </section>
+        <section id="process-fr" class="container">
+          <h2>Comment Nous Vous Accompagnons</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Onboarding personnalisé</h3>
+              <p>Nous commençons par une visite et un échange avec votre équipe pour comprendre votre infrastructure et vos besoins, afin d’intégrer vos systèmes de manière sécurisée.</p>
+            </article>
+            <article class="card">
+              <h3>Implémentation & Ajustements</h3>
+              <p>Nous appliquons les recommandations issues de l’audit, configurons les systèmes et adaptons vos pratiques IT pour qu’elles respectent l'approche "security by design"</p>
+            </article>
+            <article class="card">
+              <h3>Accompagnement continu</h3>
+              <p>Nous restons à vos côtés après l’intégration pour veiller sur vos systèmes, effectuer des audits et des rapports périodiques, et assurer un soutien technique continu.</p>
+            </article>
+          </div>
+        </section>
+        <section id="why-fr" class="container">
+          <h2>Pourquoi faire appel à Anaprotek ?</h2>
+          <p>Ne pas surveiller vos systèmes ou laisser des points uniques de défaillance peut avoir de graves conséquences : perte de données, dysfonctionnements, vulnérabilités exploitées par des logiciels malveillants, ou simplement une baisse de productivité.</p>
+          <p>Notre approche proactive vous permet de réduire ces risques en identifiant et corrigeant les faiblesses avant qu’elles ne causent des problèmes, tout en maintenant vos systèmes sains et performants.</p>
+        </section>
+        <section id="about-fr" class="container">
+          <h2>À propos d’Anaprotek</h2>
+          <p>Anaprotek est une société Sherbrookoise spécialisée en informatique et cybersécurité. Nous combinons expertise technique et approche "security by design" pour offrir à nos clients des solutions fiables et durables.</p>
+        </section>
+        <section id="contact-fr" class="container">
+          <h2>Contact</h2>
+          <address>
+            <p>Courriel : info@anaprotek.com</p>
+            <p>Téléphone : +1 555-000-0000</p>
+          </address>
+          <form action="https://formspree.io/f/mwpgqgwe" method="POST" style="max-width:400px;margin:auto">
+            <p>
+              <label for="name-fr">Nom</label>
+              <input id="name-fr" name="Name" placeholder="Nom" required>
+            </p>
+            <p>
+              <label for="email-fr">Courriel</label>
+              <input id="email-fr" type="email" name="email" placeholder="Courriel" required>
+            </p>
+            <p>
+              <label for="message-fr">Message</label>
+              <textarea id="message-fr" name="Message" rows="4" placeholder="Message" required></textarea>
+            </p>
+            <button class="btn" type="submit">Envoyer</button>
+          </form>
+        </section>
+      </div>
+      <!-- English Content -->
+      <div id="content-en" style="display:none;">
+        <section class="container">
+          <div class="grid-2">
+            <div>
+              <h1>Anaprotek</h1>
+              <p>Professional IT and cybersecurity solutions: we provide standard IT services but always with a "security by design" approach.</p>
+              <p class="slogan">Security is not an option, it’s our foundation</p>
+              <a class="btn" onclick="scrollToSection('services')">Discover our services</a>
+            </div>
+            <img src="https://fastly.picsum.photos/id/893/600/400.jpg?hmac=ovPplqNCQbvrh2ZomRBohWg-nuPxwKdfA-X3JK1zJQI" alt="Cybersecurity illustration" loading="lazy">
+          </div>
+        </section>
+        <section id="services-en" class="container">
+          <h2>Our Ongoing Services</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Monitoring & Surveillance</h3>
+              <p>Continuous monitoring of your systems and equipment to detect anomalies, anticipate problems, and maintain a stable and secure environment.</p>
+            </article>
+            <article class="card">
+              <h3>Audits & Reports</h3>
+              <p>Regular audits and detailed reports to track the security and performance of your infrastructure.</p>
+            </article>
+            <article class="card">
+              <h3>Management & Deployment</h3>
+              <p>Handling updates, software deployment, and remote support to ensure your environment is up-to-date and secure.</p>
+            </article>
+          </div>
+          <div class="center-cards">
+            <article class="card">
+              <h3>Vulnerability Detection</h3>
+              <p>Proactive identification of flaws and vulnerabilities to reduce risks before they impact your systems.</p>
+            </article>
+            <article class="card">
+              <h3>Technical Support</h3>
+              <p>Continuous technical assistance and intervention to quickly and efficiently solve problems.</p>
+            </article>
+          </div>
+        </section>
+        <section id="process-en" class="container">
+          <h2>How We Support You</h2>
+          <div class="grid-3">
+            <article class="card">
+              <h3>Personalized Onboarding</h3>
+              <p>We start with a visit and discussion with your team to understand your infrastructure and needs to integrate your systems securely.</p>
+            </article>
+            <article class="card">
+              <h3>Implementation & Adjustments</h3>
+              <p>We apply recommendations from the audit, configure systems, and adapt your IT practices to follow a "security by design" approach.</p>
+            </article>
+            <article class="card">
+              <h3>Ongoing Support</h3>
+              <p>We stay with you after integration to monitor systems, conduct periodic audits and reports, and provide continuous technical support.</p>
+            </article>
+          </div>
+        </section>
+        <section id="why-en" class="container">
+          <h2>Why Choose Anaprotek?</h2>
+          <p>Not monitoring your systems or leaving single points of failure can have serious consequences: data loss, malfunctions, exploited vulnerabilities, or simply lower productivity.</p>
+          <p>Our proactive approach allows you to reduce these risks by identifying and fixing weaknesses before they cause problems while keeping your systems healthy and efficient.</p>
+        </section>
+        <section id="about-en" class="container">
+          <h2>About Anaprotek</h2>
+          <p>Anaprotek is a Sherbrooke-based company specializing in IT and cybersecurity. We combine technical expertise and a "security by design" approach to provide our clients with reliable and sustainable solutions.</p>
+        </section>
+        <section id="contact-en" class="container">
+          <h2>Contact</h2>
+          <address>
+            <p>Email: info@anaprotek.com</p>
+            <p>Phone: +1 555-000-0000</p>
+          </address>
+          <form action="https://formspree.io/f/mwpgqgwe" method="POST" style="max-width:400px;margin:auto">
+            <p>
+              <label for="name-en">Name</label>
+              <input id="name-en" name="Name" placeholder="Name" required>
+            </p>
+            <p>
+              <label for="email-en">Email</label>
+              <input id="email-en" type="email" name="email" placeholder="Email" required>
+            </p>
+            <p>
+              <label for="message-en">Message</label>
+              <textarea id="message-en" name="Message" rows="4" placeholder="Message" required></textarea>
+            </p>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <span>© <script>
+          document.write(new Date().getFullYear())
+        </script> Anaprotek </span>
+      <span>Cybersécurité & IT sécurisée par design</span>
+    </footer>
+    <script>
+      // Nav links
+      let navLinks = document.querySelectorAll('#main-nav a');
+      const navText = {
+        fr: ['Services', 'Comment Nous Travaillons', 'À propos', 'Contact'],
+        en: ['Services', 'How We Work', 'About', 'Contact']
+      };
+      navLinks.forEach(link => link.addEventListener('click', () => scrollToSection(link.dataset.section)));
+      // Language switch
+      function switchLang(lang) {
+        document.getElementById('content-fr').style.display = (lang === 'fr') ? 'block' : 'none';
+        document.getElementById('content-en').style.display = (lang === 'en') ? 'block' : 'none';
+        navLinks.forEach((link, i) => {
+          link.textContent = navText[lang][i];
+        });
+      }
+      // Scroll to section
+      function scrollToSection(section) {
+        let activeLang = document.getElementById('content-fr').style.display !== 'none' ? 'fr' : 'en';
+        let targetEl = document.getElementById(section + '-' + activeLang);
+        if (targetEl) targetEl.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    </script>
+  </body>
+</html>
